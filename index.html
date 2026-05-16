@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Access | Limited Time Offer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #121214 0%, #1a1a2e 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .badge {
+            background: #ff3366;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        h1 span {
+            color: #00ffcc;
+        }
+
+        p.description {
+            color: #b3b3b3;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Verification Steps Area */
+        .steps-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #d1d1d1;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-num {
+            background: #00ffcc;
+            color: #121214;
+            font-weight: bold;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: block;
+            background: linear-gradient(90deg, #00ffcc 0%, #00b3ff 100%);
+            color: #121214;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px 20px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.6);
+        }
+
+        .cta-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Social Proof / Live Counter */
+        .live-status {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #888;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #00ff00;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Urgency Badge -->
+        <div class="badge">Limited Spots Remaining</div>
+
+        <!-- Main Hook Headline -->
+        <h1>Get Instant Access To <span>Exclusive Content</span></h1>
+        
+        <!-- Subheadline / Context -->
+        <p class="description">Complete a quick, secure verification step below to unlock your premium link immediately. Takes less than 2 minutes!</p>
+
+        <!-- Dynamic Instructions Area -->
+        <div class="steps-box">
+            <div class="step">
+                <span class="step-num">1</span>
+                <span>Click the dynamic access button below.</span>
+            </div>
+            <div class="step">
+                <span class="step-num">2</span>
+                <span>Complete any 1 free offer to verify you are a real user.</span>
+            </div>
+            <div class="step">
+                <span class="step-num">3</span>
+                <span>Your destination link unlocks automatically.</span>
+            </div>
+        </div>
+
+        <!-- YOUR CPAGRIP LINK GOES HERE -->
+        <a href="<script type="text/javascript" src="https://filestrue.com/script_include.php?id=1896266"></script>" class="cta-btn">
+            Unlock Access Now
+        </a>
+
+        <!-- Live Users Social Proof -->
+        <div class="live-status">
+            <span class="dot"></span>
+            <span id="user-count">142</span> users currently verifying...
+        </div>
+    </div>
+
+    <script>
+        // Simple script to make the live user count fluctuate naturally for realism
+        setInterval(function() {
+            var countElement = document.getElementById('user-count');
+            var currentCount = parseInt(countElement.innerText);
+            var change = Math.floor(Math.random() * 7) - 3; // varies up or down by 3
+            var newCount = currentCount + change;
+            if (newCount < 110) newCount = 125;
+            if (newCount > 190) newCount = 150;
+            countElement.innerText = newCount;
+        }, 3000);
+    </script>
+
+</body>
+</html>
